@@ -129,13 +129,47 @@
             <p>Llena el siguiente formulario para reservar una cita o para consultar alguna duda. Nos comunicaremos de
                 vuelta para confirmar disponibilidad.</p>
             <ul>
-                <li><input type="text" name="name" placeholder="Nombre*"></li>
-                <li><input type="text" name="phone" placeholder="Número de teléfono*"></li>
-                <li><input type="email" name="email" placeholder="Correo electrónico*"></li>
-                <li><textarea name="message" placeholder="Ingresa tu mensaje"></textarea></li>
-                <li><input type="submit" value="Enviar" class="main__btn-container__btn-reserve"></li>
+                <li>
+                    <input type="text" name="name" placeholder="Nombre*" <% if (errors && errors.name) { %>
+                    class="form__input--error"
+                    <% } %>>
+                        <% if (errors && errors.name) { %>
+                            <p class="form__error">
+                                <%= errors.name.msg %>
+                            </p>
+                            <% } %>
+                </li>
+                <li>
+                    <input type="text" name="phone" placeholder="Número de teléfono*" <% if (errors && errors.phone) {
+                        %>
+                    class="form__input--error"
+                    <% } %>>
+                        <% if (errors && errors.phone) { %>
+                            <p class="form__error">
+                                <%= errors.phone.msg %>
+                            </p>
+                            <% } %>
+                </li>
+                <li>
+                    <input type="email" name="email" placeholder="Correo electrónico*" <% if (errors && errors.email) {
+                        %>
+                    class="form__input--error"
+                    <% } %>>
+                        <% if (errors && errors.email) { %>
+                            <p class="form__error">
+                                <%= errors.email.msg %>
+                            </p>
+                            <% } %>
+                </li>
+                <li>
+                    <textarea name="message" placeholder="Ingresa tu mensaje"></textarea>
+                </li>
+                <li>
+                    <input type="submit" value="Enviar" class="main__btn-container__btn-reserve">
+                </li>
             </ul>
-            <% if (success_msg) { %>
+
+            <% if (typeof success_msg !=='undefined' && success_msg) { %>
                 <div class="success-msg">
                     <p>
                         <%= success_msg %>

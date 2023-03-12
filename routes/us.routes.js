@@ -1,19 +1,12 @@
-// Navigation for us
+// Route for us
 const express = require('express');
 const router = express.Router();
 
-router.get('/us', (req, res) => {
-  res.render('us');
-});
+const usController = require('../controllers/us.controller');
+console.log(usController);
 
+// Defining routes
+router.get('/', usController.index);
+
+// Exportar el módulo
 module.exports = router;
-
-module.exports = function(req, res, next) {
-  if (req.path === '/nosotros') {
-      res.render('us', {
-          title: 'Mohamed Hay | Nosotros'
-      });
-  } else {
-      next();
-  }
-};

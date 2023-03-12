@@ -1,4 +1,4 @@
-// Controlador de Blog
+// Controller for Blog
 
 const fs = require('fs');
 

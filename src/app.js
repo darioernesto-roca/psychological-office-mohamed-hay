@@ -37,13 +37,5 @@ app.listen(PORT, () => console.log(`Server listening in port: localhost:${PORT}`
 app.use(expressLayouts)
 app.set('view engine', 'ejs');
 
-
+// Set routes
 app.use(routes);
-
-app.get('/servicios', (req, res) => {
-    res.render('services', { title: 'Servicios | Mohamed Hay | Consultorio psicológico'})
-});
-
-app.get('/nosotros', (req, res) => {
-    res.render('us', { title: 'Nosotros | Mohamed Hay | Consultorio psicológico'})
-});

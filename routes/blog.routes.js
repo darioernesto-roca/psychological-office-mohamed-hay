@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-// Importar el controlador de blog
+// Imports blog controller
 const blogController = require('../controllers/blog.controller');
 console.log(blogController);
 
-// Definir las rutas
+// Define route for blog
 router.get('/', blogController.index);
 
-// Exportar el módulo
+// Exports the module
 module.exports = router;
