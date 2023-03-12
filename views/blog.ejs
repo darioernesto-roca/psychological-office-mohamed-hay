@@ -1,0 +1,26 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Inicio</a> |</li>
+    <li class="breadcrumb-item breadcrumb-active" aria-current="page">Blog</li>
+  </ol>
+</nav>
+
+<h1 class="page-title"><%- title %></h1>
+
+<div class="blog__card-container">
+  <% posts.forEach(post=> { %>
+    <div class="blog__card">
+      <div class="blog__card-image">
+        <img src="<%= post.image %>" alt="<%= post.title %>">
+      </div>
+      <div class="blog__card-content">
+        <h2 class="blog__card-title"><a href="/posts/<%= post.id %>">
+            <%= post.title %>
+          </a></h2>
+        <p class="blog__card-date">
+          <%= post.date %>
+        </p>
+      </div>
+    </div>
+    <% }) %>
+</div>

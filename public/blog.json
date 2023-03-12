@@ -1,0 +1,27 @@
+{
+  "postsData": {
+    "posts": [
+      {
+        "id": 1,
+        "title": "5 pasos para enfrentar el estrés en situaciones difíciles",
+        "description": "Estrategias prácticas para enfrentar el estrés en situaciones difíciles, incluyendo la identificación de las causas del estrés, la práctica de la meditación y la atención plena, y la importancia de establecer límites saludables. Además, se destaca la importancia de buscar apoyo y ayuda profesional cuando sea necesario.",
+        "date": "2023-02-27",
+        "image": "/img/posts/estres.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Importancia de la resiliencia en la vida cotidiana",
+        "description": "Cultivar la resiliencia en la vida cotidiana nos permite enfrentar mejor los retos y aprovechar las oportunidades para crecer y aprender.",
+        "date": "2023-02-28",
+        "image": "/img/posts/resiliencia.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Cómo identificar y manejar los trastornos de ansiedad",
+        "description": "<p>Este post aborda el tema de los trastornos de ansiedad, ofreciendo información detallada sobre los diferentes tipos de trastornos, sus síntomas y cómo se pueden manejar. También se proporcionan consejos prácticos para ayudar a las personas a reconocer y tratar la ansiedad de manera efectiva.</p>",
+        "date": "2023-03-02",
+        "image": "/img/posts/ansiedad.jpg"
+      }
+    ]
+  }
+}

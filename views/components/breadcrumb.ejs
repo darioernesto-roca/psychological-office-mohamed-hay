@@ -1,0 +1,10 @@
+<nav class="breadcrumb">
+  <ol class="breadcrumb-list">
+    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+    <% const pathLevels = req.path.split('/').filter(level => level !== ''); %>
+    <% pathLevels.forEach((level, index) => { %>
+      <% const breadcrumbPath = `/${pathLevels.slice(0, index + 1).join('/')}`; %>
+      <li class="breadcrumb-item"><a href="<%= breadcrumbPath %>"><%= level %></a></li>
+    <% }); %>
+  </ol>
+</nav>

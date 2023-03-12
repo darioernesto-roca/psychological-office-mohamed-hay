@@ -1,0 +1,30 @@
+<h1 class="page-title"><%- title %></h1>
+
+<div class="page__section-container">
+  <section id="contact" class="main__section form">
+    <form class="form" method="POST" action="/contacto">
+      <h4 class="main__section__title">Agenda tu cita AQUÍ</h4>
+      <p>Llena el siguiente formulario para reservar una cita o para consultar alguna duda. Nos comunicaremos de vuelta
+        para confirmar disponibilidad.</p>
+      <ul>
+        <li><input type="text" name="name" placeholder="Nombre*"></li>
+        <li><input type="text" name="phone" placeholder="Número de teléfono*"></li>
+        <li><input type="email" name="email" placeholder="Correo electrónico*"></li>
+        <li><textarea name="message" placeholder="Escribe aquí tu mensaje"></textarea></li>
+        <li><input type="submit" value="Enviar" class="main__btn-container__btn-reserve"></li>
+      </ul>
+      <% if (success_msg) { %>
+        <div class="success-msg">
+          <p>
+            <%= success_msg %>
+          </p>
+        </div>
+        <% } else { %>
+          <div class="success-msg">
+            <p>Haga click en el botón para enviar el formulario</p>
+          </div>
+          <% } %>
+    </form>
+
+  </section>
+</div>

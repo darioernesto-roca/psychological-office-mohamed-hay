@@ -1,0 +1,32 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Inicio</a> |</li>
+    <li class="breadcrumb-item"><a href="/blog">Blog</a> |</li>
+    <li class="breadcrumb-item breadcrumb-active" aria-current="page">
+      <%= post.title %>
+    </li>
+  </ol>
+</nav>
+
+<div class="post__cover-container" style="background-image: url('<%= post.image %>')">
+  <h1 class="main__main-title">Consultorio psicológico</h1>
+  <h2 class="main__main-subtitle">Mohamed Hay</h2>
+  <div class="main__btn-container">
+    <button class="main__btn-container__btn-reserve" href="#contact">Reserva tu cita</button>
+  </div>
+</div>
+
+<div class="post__sections-container">
+  <% title=post.title %>
+
+    <h1>
+      <%= post.title %>
+    </h1>
+
+    <div><%- post.content %></div>
+
+    <span class="post__author">Autor: Mohamed Hay | Psicólogo.</span>
+    <span class="post__date">Elaborado el <%= post.date %></span>
+
+
+</div>
