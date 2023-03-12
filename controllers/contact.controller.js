@@ -6,7 +6,7 @@ const { validationResult } = require("express-validator");
 
 
 exports.get = (req, res) => {
-  const errors = req.flash("errors")[0] || {};
+  const errors = req.query.errors;
   res.render('contact', {
     title: 'Contacto | Mohamed Hay | Consultorio psicológico',
     errors,
@@ -32,7 +32,7 @@ exports.sendEmail = async (req, res) => {
     // Verify if there are errors in validation
     if (!errors.isEmpty()) {
       return res.render("contact", {
-        title: "Contacto vengo de validator | Mohamed Hay | Consultorio psicológico",
+        title: "Contacto | Mohamed Hay | Consultorio psicológico",
         errors: errors.mapped(),
       })
     }

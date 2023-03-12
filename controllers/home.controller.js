@@ -6,7 +6,7 @@ const { validationResult } = require("express-validator");
 
 
 exports.index = (req, res) => {
-  const errors = req.flash("errors")[0] || {};
+  const errors = req.query.errors;
   res.render("home", {
     title: "Inicio | Mohamed Hay | Consultorio psicológico",
     errors,
