@@ -481,6 +481,7 @@ form {
 }
 
 .form {
+  border-radius: 10px;
   color: #f5f5f5;
   padding: 3em 0;
   max-width: 768px;
@@ -696,14 +697,27 @@ footer.main-footer {
 }
 
 .us-image {
-  width: 40vw;
+  width: 70vw;
   background-color: #ffffff;
 }
 
 .us__image-container {
-  width: 70%;
-  margin: 1em;
+  margin: 1em auto;
 }
+
+@media (min-width: 768px) {
+  .us {
+    flex-direction: row;
+  }
+
+  .us-image {
+    width: 30vw;
+  }
+
+}
+
+
+
 /* WhatsApp icon */
 
 .float {
@@ -718,11 +732,6 @@ footer.main-footer {
   box-shadow: 2px 2px 3px #999;
 }
 
-@media (min-width: 768px) {
-  .us {
-    flex-direction: row;
-  }
-}
 
 /* Services */
 

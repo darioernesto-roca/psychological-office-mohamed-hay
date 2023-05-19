@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node src/app.js --watch",
     "dev": "nodemon src/app.js",
     "build": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,11 +13,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    
     "cors": "^2.8.5",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1",
     "express-validator": "^6.15.0",
+    "http-errors": "^2.0.0",
     "nodemailer": "^6.9.1",
     "nodemailer-mailgun-transport": "^2.1.5"
   },
